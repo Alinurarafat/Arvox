@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for horizontal scroll sections */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Scroll Reveal Animations */
+.sr-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sr-reveal.sr-animate {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+.sr-fade {
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.6s ease-out;
+}
+
+.sr-fade.sr-animate {
+  opacity: 1;
+  will-change: auto;
+}
