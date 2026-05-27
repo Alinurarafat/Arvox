@@ -5,6 +5,7 @@ import i18n from "./i18n";
 import { CartProvider } from "./context/CartContext";
 import { ShopifyProvider } from "./context/ShopifyContext";
 import CartDrawer from "./components/feature/CartDrawer";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           </BrowserRouter>
         </CartProvider>
       </ShopifyProvider>
+      <Analytics />
     </I18nextProvider>
   );
 }
